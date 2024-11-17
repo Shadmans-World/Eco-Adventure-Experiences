@@ -1,0 +1,191 @@
+
+[
+
+    {
+      "id": 1,
+      "title": "Sajek Valley Trek",
+      "image": "https://i.ibb.co.com/84vk8F3/1.jpg",
+      "category": "Mountain Treks",
+      "shortDescription": "Explore the serene Sajek Valley, the queen of hills in Bangladesh.",
+      "cost": 3500,
+      "bookingAvailability": true,
+      "location": "Sajek Valley, Rangamati",
+      "duration": "2 Days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Guide", "Transportation", "Meals", "Trekking Gear"],
+      "ecoFriendlyFeatures": ["Reusable water bottles", "Plastic-free zones", "Locally sourced food"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Wear comfortable hiking shoes.",
+        "Avoid littering.",
+        "Carry light, weather-appropriate clothing."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Saint Martin's Coral Dive",
+      "image": "https://i.ibb.co.com/6wyMjx9/2.jpg",
+      "category": "Ocean Dives",
+      "shortDescription": "Dive into the crystal-clear waters of Saint Martin’s Island.",
+      "cost": 7500,
+      "bookingAvailability": true,
+      "location": "Saint Martin's Island, Cox's Bazar",
+      "duration": "1 Day",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Diving Gear", "Safety Equipment", "Lunch"],
+      "ecoFriendlyFeatures": ["Coral-safe diving practices", "Marine-safe sunscreen", "Waste collection services"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Must know basic swimming.",
+        "Do not touch or disturb marine life.",
+        "Use eco-friendly sunscreen."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Sundarbans Wildlife Safari",
+      "image": "https://i.ibb.co.com/khsTHvL/3.jpg",
+      "category": "Wildlife Safaris",
+      "shortDescription": "Explore the majestic Sundarbans, home of the Bengal tiger.",
+      "cost": 9000,
+      "bookingAvailability": true,
+      "location": "Sundarbans, Khulna",
+      "duration": "3 Days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Boat Tour", "Guide", "Meals", "Accommodation"],
+      "ecoFriendlyFeatures": ["No-trace camping", "Solar-powered boats", "Support for local communities"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Carry insect repellent.",
+        "Do not make loud noises to disturb wildlife.",
+        "Follow instructions from the guide."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Ratargul Swamp Forest Expedition",
+      "image": "https://i.ibb.co.com/S6s5KSg/4.jpg",
+      "category": "Mangrove Forest Expeditions",
+      "shortDescription": "Paddle through the tranquil Ratargul swamp forest.",
+      "cost": 3000,
+      "bookingAvailability": true,
+      "location": "Ratargul, Sylhet",
+      "duration": "1 Day",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Boat", "Guide", "Snacks"],
+      "ecoFriendlyFeatures": ["Non-motorized boats", "No single-use plastics", "Waste management initiatives"],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        "Wear waterproof clothing.",
+        "Do not pluck or damage plants.",
+        "Carry drinking water."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Nilgiri Camping Retreat",
+      "image": "https://i.ibb.co.com/Vj5J6Zg/5.jpg",
+      "category": "Camping Retreats",
+      "shortDescription": "Camp under the stars in the scenic Nilgiri Hills.",
+      "cost": 8000,
+      "bookingAvailability": false,
+      "location": "Nilgiri, Bandarban",
+      "duration": "2 Days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Tents", "Meals", "Guide", "Campfire Equipment"],
+      "ecoFriendlyFeatures": ["Solar-powered lights", "Reusable utensils", "Leave-no-trace policy"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Pack warm clothing.",
+        "Avoid making unnecessary noise.",
+        "Dispose of waste responsibly."
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Boga Lake Trek",
+      "image": "https://i.ibb.co.com/mth3mTr/6.jpg",
+      "category": "Mountain Treks",
+      "shortDescription": "Trek to the serene and picturesque Boga Lake.",
+      "cost": 6000,
+      "bookingAvailability": true,
+      "location": "Boga Lake, Bandarban",
+      "duration": "3 Days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Guide", "Meals", "Camping Gear"],
+      "ecoFriendlyFeatures": ["Minimal waste policy", "Use of biodegradable products", "Support for local guides"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Pack light but include essentials.",
+        "Respect local customs and traditions.",
+        "Stay hydrated."
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Kaptai Lake Kayaking",
+      "image": "https://i.ibb.co.com/ZG7Gkms/7.webp",
+      "category": "River Adventures",
+      "shortDescription": "Kayak across the pristine waters of Kaptai Lake.",
+      "cost": 4500,
+      "bookingAvailability": true,
+      "location": "Kaptai Lake, Rangamati",
+      "duration": "1 Day",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Kayak", "Safety Gear", "Snacks"],
+      "ecoFriendlyFeatures": ["Non-motorized kayaks", "Reusable bottles", "Eco-conscious tourism practices"],
+      "maxGroupSize": 5,
+      "specialInstructions": [
+        "Wear life jackets at all times.",
+        "Do not litter the water.",
+        "Respect other kayakers."
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Alikadam River Expedition",
+      "image": "https://i.ibb.co.com/YRfvrHC/8.webp",
+      "category": "River Adventures",
+      "shortDescription": "Experience the thrill of navigating through Alikadam’s river bends.",
+      "cost": 7000,
+      "bookingAvailability": true,
+      "location": "Alikadam, Bandarban",
+      "duration": "2 Days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Boat", "Safety Equipment", "Guide", "Meals"],
+      "ecoFriendlyFeatures": ["Eco-friendly boats", "Support for local boatmen", "Waste management services"],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        "Pack light for easy travel.",
+        "Carry waterproof bags.",
+        "Follow safety instructions from the guide."
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Cox's Bazar Sand Camping",
+      "image": " https://i.ibb.co.com/hVfnSLQ/9.jpg",
+      "category": "Desert Exploration",
+      "shortDescription": "Camp on the longest sandy beach in the world.",
+      "cost": 5000,
+      "bookingAvailability": true,
+      "location": "Cox's Bazar, Chattogram",
+      "duration": "1 Night",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Tents", "Guide", "Dinner"],
+      "ecoFriendlyFeatures": ["Reusable camping gear", "Waste disposal services", "Plastic-free zone"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Avoid disturbing local wildlife.",
+        "Pack eco-friendly sunscreen.",
+        "Respect the environment."
+      ]
+    }
+  ]
+  
+ 
+
+
+
+
+
