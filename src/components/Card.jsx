@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({ item }) => {
   return (
@@ -26,7 +27,7 @@ const Card = ({ item }) => {
         </div>
 
         <div className="card-actions mt-2"> {/* Added mt-auto to push the button to the bottom */}
-          <button className="btn btn-primary">Explore Now</button>
+          <Link to={`/details/${item.id}`} className="btn btn-primary">Explore Now</Link>
         </div>
       </div>
     </div>

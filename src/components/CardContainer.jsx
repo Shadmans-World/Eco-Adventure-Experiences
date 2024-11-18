@@ -5,7 +5,7 @@ import Card from './Card';
 const CardContainer = () => {
   const { items } = useContext(AuthContext);
   return (
-    <div className="max-w-[1440px] mx-auto flex justify-center flex-col items-center ">
+    <div className="max-w-[1440px] mx-auto flex justify-center flex-col items-center mt-10">
       {/* Title of the project */}
       <h1 className='text-4xl font-bold'>ECO-Beautiful BANGLADESH</h1>
       

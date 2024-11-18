@@ -2,83 +2,67 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import app from '../Firebase/firebase.config';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
-export const AuthContext = createContext(null)
-export const auth = getAuth(app)
+export const AuthContext = createContext(null);
+export const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
-
-    const [user, setUser] = useState(null)
-    const [loading, setLoading] = useState(true)
-    const [passErrors, setPassErrors] = useState({
-        uppercase: "",
-        lowercase: "",
-        length: "",
-      });
-    const [error, setError] = useState("")
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true); 
+    const [error, setError] = useState("");
     const [items, setItems] = useState([]);
     const [images, setImages] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('/data.json')
         .then(result => result.json())
         .then(data => {
             setItems(data);
             const imageUrls = data.map(item => item.image);  // Create an array of image URLs
-        setImages(imageUrls);
-            
-            
+            setImages(imageUrls);
         })
         .catch(err => console.error("Failed to fetch data:", err));
-    },[])
-   
-    console.log(items)
-    
-    // Create USer
+    }, []);
+
     const createUser = (email, password) => {
-        setLoading(true)
-        
-       return createUserWithEmailAndPassword(auth,email, password)
-    }
+        setLoading(true);  // Ensure loading state is set to true before API calls
+        return createUserWithEmailAndPassword(auth, email, password);
+    };
 
-    // Login USer
     const logInUser = (email, password) => {
-        setLoading(true)
-        return signInWithEmailAndPassword(auth,email,password)
-    }
+        setLoading(true);  // Set loading before login attempt
+        return signInWithEmailAndPassword(auth, email, password);
+    };
 
-    // Log Out
     const logOut = () => {
-        setLoading(true)
-        return signOut(auth)
-    }
+        setLoading(true);  // Set loading before logging out
+        return signOut(auth);
+    };
 
-    useEffect(()=>{
-        const unSubscribe = onAuthStateChanged(auth,(currentUser)=>{
-            setUser(currentUser)
-            setLoading(false)
-            // console.log(loading)
-            console.log('User is:',currentUser)
-            
-        })
-        return ()=>{
-            unSubscribe()
-        }
-    },[])
-    // console.log(loading)
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            setLoading(false);  // Set loading to false after authentication state is fetched
+        });
 
-    // Provider Object
+        return () => {
+            unSubscribe(); // Cleanup subscription on unmount
+        };
+    }, []);
+
     const authInfo = {
-        user, setUser,
+        user,
+        setUser,
         createUser,
         logInUser,
         logOut,
-        setPassErrors,
-        passErrors,
-        error, setError,
-        items, setItems,
-        images, setImages
-    }
-
+        error,
+        setError,
+        items,
+        setItems,
+        images,
+        setImages,
+        loading,  // Provide loading state
+    };
 
     return (
         <AuthContext.Provider value={authInfo}>

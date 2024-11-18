@@ -7,7 +7,7 @@ const Banner = () => {
   const { images } = useContext(AuthContext); // Access images from context
 
   return (
-    <div className="banner-container flex justify-center  h-screen">
+    <div className="banner-container flex justify-center  mt-14">
       <AwesomeSlider
         className="slider-custom"  // Use a custom class for the slider
       >
