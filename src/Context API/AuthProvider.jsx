@@ -9,6 +9,29 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
+    const [passErrors, setPassErrors] = useState({
+        uppercase: "",
+        lowercase: "",
+        length: "",
+      });
+    const [error, setError] = useState("")
+    const [items, setItems] = useState([]);
+    const [images, setImages] = useState([]);
+
+    useEffect(()=>{
+        fetch('/data.json')
+        .then(result => result.json())
+        .then(data => {
+            setItems(data);
+            const imageUrls = data.map(item => item.image);  // Create an array of image URLs
+        setImages(imageUrls);
+            
+            
+        })
+        .catch(err => console.error("Failed to fetch data:", err));
+    },[])
+   
+    console.log(items)
     
     // Create USer
     const createUser = (email, password) => {
@@ -48,7 +71,12 @@ const AuthProvider = ({children}) => {
         user, setUser,
         createUser,
         logInUser,
-        logOut
+        logOut,
+        setPassErrors,
+        passErrors,
+        error, setError,
+        items, setItems,
+        images, setImages
     }
 
 

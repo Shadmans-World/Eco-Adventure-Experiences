@@ -4,10 +4,23 @@ import { auth, AuthContext } from "../Context API/AuthProvider";
 import { FaRegUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
+
     const {user, logOut, setUser} = useContext(AuthContext)
     const links = <>
         <li className="mr-3"><NavLink to='/'>Home</NavLink></li>
-        <li className="mr-3"><NavLink to='/update-profile'>Update Profile</NavLink></li>
+        {
+          user ? (
+           <>
+            <li className="mr-3"><NavLink to='/update-profile'>Update Profile</NavLink></li>
+            <li className="mr-3"><NavLink to='/my-profile'>My Profile</NavLink></li>
+           </>
+          )
+          :
+          (
+            <li></li>
+          )
+        }
+        
     </>
 
     

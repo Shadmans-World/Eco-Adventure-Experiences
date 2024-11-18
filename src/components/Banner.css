@@ -1,0 +1,14 @@
+/* In your Banner.css file */
+.slider-custom {
+    max-width: 1080px;   /* Set width */
+    max-height: 500px;   /* Set height */
+    margin: 0 auto;  /* Center the slider horizontally */
+    margin-bottom: 50px;
+}
+  
+awssld__image img {
+  object-fit: cover;  /* This applies the object-cover style */
+  width: 100%;         /* Ensures the image takes full width */
+  height: 100%;        /* Ensures the image takes full height */
+ 
+}

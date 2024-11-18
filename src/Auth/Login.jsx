@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context API/AuthProvider";
 
 const Login = () => {
-    const {setUser, logInUser} = useContext(AuthContext)
+    const {setUser, logInUser,error,setError} = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleLogin = (e) => {
         e.preventDefault()
         const data = e.target;
@@ -15,12 +16,14 @@ const Login = () => {
         .then(result =>{
           const user = result.user;
           setUser(user)
-          console.log('Login Successful')
+          // console.log('Login Successful')
+          setError("");
+          navigate('/')
         })
         .catch(error=>{
           const code = error.code;
           const message = error.message;
-          console.log(code,message)
+          setError(code,message)
         })
     }
 
@@ -74,6 +77,12 @@ const Login = () => {
             <div className="text-center text-[15px] mb-3 text-red-600">
                 <p>New to this website? <span><Link className="text-black font-bold" to='/auth/register'>Register</Link> please</span></p>
             </div>
+            {
+              error ?
+              (<p className="text-red-600 mb-3 text-center">{error}</p>)
+              :
+              ("")
+            }
           </div>
         </div>
       </div>
