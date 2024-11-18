@@ -12,6 +12,8 @@ import Register from './Auth/Register.jsx';
 import ForgotPass from './Auth/ForgotPass.jsx';
 import Details from './components/Details.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx'; // Import PrivateRoute
+import MyProfile from './components/MyProfile.jsx';
+import UpdateProfile from './components/UpdateProfile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,8 +43,24 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <Details />
           </PrivateRoute>
-        ), // Wrap Details with PrivateRoute to protect it
+        ), 
       },
+      {
+        path:'/my-profile',
+        element:(
+            <PrivateRoute>
+              <MyProfile></MyProfile>
+            </PrivateRoute>
+        )
+      },
+      {
+        path:'/update-profile',
+        element:(
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        )
+      }
     ],
   },
 ]);
