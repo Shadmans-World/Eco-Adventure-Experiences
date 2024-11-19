@@ -1,73 +1,92 @@
 // index.js or wherever you define your routes
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import AuthProvider from './Context API/AuthProvider.jsx';
-import Home from './components/Home.jsx';
-import Root from './Root/Root.jsx';
-import ErrorPage from './components/ErrorPage.jsx';
-import Login from './Auth/Login.jsx';
-import Register from './Auth/Register.jsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AuthProvider from "./Context API/AuthProvider.jsx";
+import Home from "./components/Home.jsx";
+import Root from "./Root/Root.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
+import Login from "./Auth/Login.jsx";
+import Register from "./Auth/Register.jsx";
 
-import Details from './components/Details.jsx';
-import PrivateRoute from './components/PrivateRoute.jsx'; // Import PrivateRoute
-import MyProfile from './components/MyProfile.jsx';
-import UpdateProfile from './components/UpdateProfile.jsx';
-import ForgotPassword from './Auth/ForgotPassword.jsx';
+import Details from "./components/Details.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx"; // Import PrivateRoute
+import MyProfile from "./components/MyProfile.jsx";
+import UpdateProfile from "./components/UpdateProfile.jsx";
+import ForgotPassword from "./Auth/ForgotPassword.jsx";
+import AboutUs from "./components/AboutUs.jsx";
+import Contact from "./components/Contact.jsx";
+import Services from "./components/Services.jsx";
+import Blog from "./components/Blogs.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     errorElement: <ErrorPage />,
     element: <Root />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: '/auth/login',
+        path: "/auth/login",
         element: <Login />,
       },
       {
-        path: '/auth/register',
+        path: "/auth/register",
         element: <Register />,
       },
       {
-        path: '/forgotPass',
-        element: <ForgotPassword />
-    },
-      
+        path: "/forgotPass",
+        element: <ForgotPassword />,
+      },
       {
-        path: '/details/:id',
+        path: "/about",
+        element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/services",
+        element: <Services></Services>,
+      },
+      {
+        path: "/blogs",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/details/:id",
         element: (
           <PrivateRoute>
             <Details />
           </PrivateRoute>
-        ), 
+        ),
       },
       {
-        path:'/my-profile',
-        element:(
-            <PrivateRoute>
-              <MyProfile></MyProfile>
-            </PrivateRoute>
-        )
+        path: "/my-profile",
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
+        ),
       },
       {
-        path:'/update-profile',
-        element:(
+        path: "/update-profile",
+        element: (
           <PrivateRoute>
             <UpdateProfile></UpdateProfile>
           </PrivateRoute>
-        )
-      }
+        ),
+      },
     ],
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />

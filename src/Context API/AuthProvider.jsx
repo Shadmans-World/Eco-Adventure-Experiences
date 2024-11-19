@@ -71,7 +71,6 @@ const AuthProvider = ({ children }) => {
         setLoading(false); // Stop loading state after error
       });
   };
-
   
 
   // Auth state change listener (user state persistence)

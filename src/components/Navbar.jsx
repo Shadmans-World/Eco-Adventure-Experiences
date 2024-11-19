@@ -8,11 +8,13 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li className="mr-3"><NavLink to='/'>Home</NavLink></li>
+      <li className="mr-3 font-bold"><NavLink to='/'>Home</NavLink></li>
+      <li className="mr-3 font-bold"><NavLink to='/blogs'>Blogs</NavLink></li>
+      
       {user ? (
         <>
-          <li className="mr-3"><NavLink to='/update-profile'>Update Profile</NavLink></li>
-          <li className="mr-3"><NavLink to='/my-profile'>My Profile</NavLink></li>
+          <li className="mr-3 font-bold"><NavLink to='/update-profile'>Update Profile</NavLink></li>
+          <li className="mr-3 font-bold"><NavLink to='/my-profile'>My Profile</NavLink></li>
         </>
       ) : (
         <li></li>
@@ -24,10 +26,10 @@ const Navbar = () => {
     logOut()
       .then(() => {
         setUser(null);
-        console.log('Logout Successful');
+       
       })
       .catch(error => {
-        console.log(error.message);
+        
       });
   };
 

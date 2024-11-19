@@ -1,0 +1,222 @@
+{
+    "blogPosts": [
+      {
+        "id": 1,
+        "title": "Exploring the Majestic Sundarbans: A Haven for Nature Lovers",
+        "description": "The Sundarbans, home to the Bengal tiger, offers an unparalleled adventure through its unique mangrove forests, making it a must-visit for eco-tourists seeking a true wilderness experience.",
+        "blogger": {
+          "name": "Sarah Greenfield",
+          "identity": "A travel writer and environmentalist focusing on responsible tourism practices in Bangladesh’s wild terrains."
+        },
+        "reviews": [
+          {
+            "reviewer": "John Doe",
+            "country": "USA",
+            "comment": "An incredible experience! The biodiversity here is unmatched.",
+            "rating": 5
+          },
+          {
+            "reviewer": "Jane Smith",
+            "country": "UK",
+            "comment": "A beautiful place, but we should be mindful of the environmental impact.",
+            "rating": 4
+          },
+          {
+            "reviewer": "Mohammad Ali",
+            "country": "Bangladesh",
+            "comment": "Incredible biodiversity, loved seeing the tigers!",
+            "rating": 5
+          }
+        ],
+        "commentsCount": 5,
+        "shareCount": 20
+      },
+      {
+        "id": 2,
+        "title": "Camping Under the Stars at Nilgiri Hills",
+        "description": "Experience the serenity of camping in the scenic Nilgiri Hills. A perfect getaway for nature lovers, where you can connect with the environment and enjoy the peace of the hills.",
+        "blogger": {
+          "name": "Nadim Hasan",
+          "identity": "An eco-tourism advocate dedicated to promoting sustainable camping experiences in Bangladesh’s highlands."
+        },
+        "reviews": [
+          {
+            "reviewer": "Mohammad Ali",
+            "country": "Bangladesh",
+            "comment": "A peaceful escape! The stars at night were incredible.",
+            "rating": 5
+          },
+          {
+            "reviewer": "Sara Tanvir",
+            "country": "Bangladesh",
+            "comment": "Amazing place but could use better facilities for eco-camping.",
+            "rating": 4
+          },
+          {
+            "reviewer": "David Lee",
+            "country": "Australia",
+            "comment": "Great campsite, but a bit more adventure could make it better.",
+            "rating": 4
+          }
+        ],
+        "commentsCount": 3,
+        "shareCount": 12
+      },
+      {
+        "id": 3,
+        "title": "Trekking to Boga Lake: A Hidden Gem in Bangladesh",
+        "description": "Trekking to Boga Lake offers a stunning view of Bangladesh's untouched beauty. The journey through the hills to this serene lake is a must-do for adventurers seeking to immerse themselves in nature.",
+        "blogger": {
+          "name": "Ayesha Karim",
+          "identity": "A passionate traveler and eco-conscious trekker exploring the hidden gems of Bangladesh."
+        },
+        "reviews": [
+          {
+            "reviewer": "Rafiul Alam",
+            "country": "Bangladesh",
+            "comment": "The trek was challenging but the views were worth it!",
+            "rating": 5
+          },
+          {
+            "reviewer": "Fariha Tasnim",
+            "country": "Bangladesh",
+            "comment": "A hidden gem indeed, but it's important to keep the trail clean.",
+            "rating": 4
+          },
+          {
+            "reviewer": "Julia Morgan",
+            "country": "Canada",
+            "comment": "Beautiful trek, but we need more eco-friendly initiatives along the route.",
+            "rating": 4
+          }
+        ],
+        "commentsCount": 8,
+        "shareCount": 25
+      },
+      {
+        "id": 4,
+        "title": "Kayaking Across the Pristine Kaptai Lake",
+        "description": "Paddle through the peaceful waters of Kaptai Lake, surrounded by the lush forests of Rangamati. A perfect adventure for beginners and nature enthusiasts.",
+        "blogger": {
+          "name": "Rafiul Alam",
+          "identity": "A water sports enthusiast and eco-conscious traveler advocating for waterway preservation in Bangladesh."
+        },
+        "reviews": [
+          {
+            "reviewer": "Tariq Zaman",
+            "country": "Bangladesh",
+            "comment": "A peaceful kayaking experience amidst the natural beauty of Rangamati.",
+            "rating": 5
+          },
+          {
+            "reviewer": "Anisur Rahman",
+            "country": "Bangladesh",
+            "comment": "The water is beautiful, but we need to protect it from pollution.",
+            "rating": 4
+          },
+          {
+            "reviewer": "Emily Clark",
+            "country": "USA",
+            "comment": "Kayaking here was an unforgettable experience. Hope the local communities are better engaged in eco-tourism.",
+            "rating": 4
+          }
+        ],
+        "commentsCount": 6,
+        "shareCount": 18
+      },
+      {
+        "id": 5,
+        "title": "Camping on the Shores of Cox’s Bazar",
+        "description": "Spend a night under the stars at the world’s longest natural sandy beach. This adventure offers a unique experience for eco-tourists who want to enjoy nature while maintaining environmental responsibility.",
+        "blogger": {
+          "name": "Meherul Islam",
+          "identity": "An adventure enthusiast passionate about coastal ecosystems and eco-friendly travel practices in Bangladesh."
+        },
+        "reviews": [
+          {
+            "reviewer": "Rima Rifat",
+            "country": "Bangladesh",
+            "comment": "A fantastic camping experience, with breathtaking beach views.",
+            "rating": 5
+          },
+          {
+            "reviewer": "Jamal Hossain",
+            "country": "Bangladesh",
+            "comment": "Wonderful beach, but the area could use more eco-friendly facilities.",
+            "rating": 4
+          },
+          {
+            "reviewer": "Carlos Gomez",
+            "country": "Spain",
+            "comment": "Great place for camping, but I hope they improve waste management in the area.",
+            "rating": 3
+          }
+        ],
+        "commentsCount": 10,
+        "shareCount": 30
+      },
+      {
+        "id": 6,
+        "title": "Exploring the Wilderness of Ratargul Swamp Forest",
+        "description": "Experience the tranquility of Ratargul’s swamp forest, one of the few swamp forests in Bangladesh. Explore this unique ecosystem while promoting eco-friendly tourism.",
+        "blogger": {
+          "name": "Fariha Tasnim",
+          "identity": "A passionate eco-tourism advocate, focusing on promoting eco-friendly adventures in Bangladesh’s diverse ecosystems."
+        },
+        "reviews": [
+          {
+            "reviewer": "Ruth Jahan",
+            "country": "Bangladesh",
+            "comment": "A serene and peaceful place to visit. We should promote responsible tourism.",
+            "rating": 5
+          },
+          {
+            "reviewer": "Tanvir Islam",
+            "country": "Bangladesh",
+            "comment": "A hidden gem, but accessibility can be improved for eco-tourists.",
+            "rating": 4
+          },
+          {
+            "reviewer": "Maxwell Perez",
+            "country": "USA",
+            "comment": "Loved the swamp forest! It's an unforgettable experience.",
+            "rating": 5
+          }
+        ],
+        "commentsCount": 4,
+        "shareCount": 15
+      },
+      {
+        "id": 7,
+        "title": "Adventure in the Beautiful Saint Martin’s Coral Reef",
+        "description": "Discover the underwater beauty of Saint Martin’s Island, with its vibrant coral reefs and crystal-clear waters, perfect for a sustainable diving experience.",
+        "blogger": {
+          "name": "Rana Mahmud",
+          "identity": "A marine conservationist focused on promoting sustainable diving and oceanic preservation in Bangladesh."
+        },
+        "reviews": [
+          {
+            "reviewer": "Mohammad Rafique",
+            "country": "Bangladesh",
+            "comment": "Incredible underwater scenery, but we need to protect it from over-tourism.",
+            "rating": 5
+          },
+          {
+            "reviewer": "Tariq Zaman",
+            "country": "Bangladesh",
+            "comment": "Amazing place for divers, but ensure we follow responsible tourism practices.",
+            "rating": 4
+          },
+          {
+            "reviewer": "Jodie Thompson",
+            "country": "Canada",
+            "comment": "Saint Martin’s reef is a treasure! A must-see for diving lovers.",
+            "rating": 5
+          }
+        ],
+        "commentsCount": 3,
+        "shareCount": 22
+      }
+    ]
+  }
+  

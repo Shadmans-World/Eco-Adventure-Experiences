@@ -53,14 +53,14 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        console.log("Registration Successful", user);
+        
 
         updateProfile(user, {
           displayName: name,
           photoURL: photo,
         })
           .then(() => {
-            console.log("Profile Updated");
+           
 
             // Manually update the user in the AuthContext after profile update
             const updatedUser = { ...user, displayName: name, photoURL: photo };
@@ -71,12 +71,12 @@ const Register = () => {
             navigate("/"); // Navigate to the home page
           })
           .catch((err) => {
-            console.log("Error updating profile:", err.code, err.message);
+           
             setError(err.message); // Display only the error message
           });
       })
       .catch((err) => {
-        console.log(err.message, err.code);
+        
         setError(err.message); // Set the error message to show to the user
       });
   };
@@ -87,7 +87,7 @@ const Register = () => {
         navigate("/"); // Navigate to home page after successful Google Sign-In
       })
       .catch((err) => {
-        console.log("Google Sign-In Error:", err.message);
+        
         setError(err.message); // Show the error message to the user
       });
   };
@@ -172,6 +172,12 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
+             {/* Error Message */}
+             {error && (
+              <div className="form-control mb-3">
+                <p className="text-center text-red-600 text-sm">{error}</p>
+              </div>
+            )}
             <p className="text-center mb-3 text-red-600 text-[15px]">
               Already have an account?{" "}
               <Link className="font-bold text-black" to="/auth/login">
@@ -190,12 +196,7 @@ const Register = () => {
               </button>
             </div>
 
-            {/* Error Message */}
-            {error && (
-              <div className="form-control mb-3">
-                <p className="text-center text-red-600 text-sm">{error}</p>
-              </div>
-            )}
+           
           </div>
         </div>
       </div>

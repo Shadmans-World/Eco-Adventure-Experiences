@@ -108,6 +108,8 @@ const Login = () => {
                 </button>
               </div>
             </form>
+              {/* Display Error Message */}
+              {error && <p className="text-red-600 mb-3 text-center">{error}</p>}
             <div className="text-center text-[15px] mb-3 text-red-600">
               <p>
                 New to this website?{" "}
@@ -131,8 +133,7 @@ const Login = () => {
               </button>
             </div>
 
-            {/* Display Error Message */}
-            {error && <p className="text-red-600 mb-3 text-center">{error}</p>}
+          
           </div>
         </div>
       </div>
