@@ -4,37 +4,33 @@ import { auth, AuthContext } from "../Context API/AuthProvider";
 import { FaRegUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
+  const { user, logOut, setUser } = useContext(AuthContext);
 
-    const {user, logOut, setUser} = useContext(AuthContext)
-    const links = <>
-        <li className="mr-3"><NavLink to='/'>Home</NavLink></li>
-        {
-          user ? (
-           <>
-            <li className="mr-3"><NavLink to='/update-profile'>Update Profile</NavLink></li>
-            <li className="mr-3"><NavLink to='/my-profile'>My Profile</NavLink></li>
-           </>
-          )
-          :
-          (
-            <li></li>
-          )
-        }
-        
+  const links = (
+    <>
+      <li className="mr-3"><NavLink to='/'>Home</NavLink></li>
+      {user ? (
+        <>
+          <li className="mr-3"><NavLink to='/update-profile'>Update Profile</NavLink></li>
+          <li className="mr-3"><NavLink to='/my-profile'>My Profile</NavLink></li>
+        </>
+      ) : (
+        <li></li>
+      )}
     </>
+  );
 
-    
-    const handleLogOut = () => {
-      logOut()
-    .then(()=>{
-      setUser(null)
-      console.log('Logout Successful')
-    })
-    .catch(error => {
-      console.log(error.message)
-    })
-    }
-    
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        setUser(null);
+        console.log('Logout Successful');
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -60,47 +56,40 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-             {links}
+              {links}
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">BEAUTIFUL BANGLADESH</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-           {links}
+            {links}
           </ul>
         </div>
         <div className="navbar-end flex gap-3">
-          {
-            user ? (user.photoURL ?
-              (
-                <div className="relative group">
-              <img
-                src={user.photoURL}
-                alt="user"
-                className="w-10 h-10 rounded-xl object-cover"
-              />
-              <span className="absolute -bottom-10 left-0 right-0 w-max bg-opacity-50 text-black text-sm text-center rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal max-w-32 overflow-hidden">
-                {user.displayName}
-              </span>
-            </div>
-              ) 
-              :
-              (
-                <FaRegUserCircle className="text-2xl"/>
-              )
+          {user ? (
+            user.photoURL ? (
+              <div className="relative group">
+                <img
+                  src={user.photoURL}
+                  alt="user"
+                  className="w-10 h-10 rounded-xl object-cover"
+                />
+                <span className="absolute -bottom-10 left-0 right-0 w-max bg-opacity-50 text-black text-sm text-center rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal max-w-32 overflow-hidden">
+                  {user.displayName}
+                </span>
+              </div>
+            ) : (
+              <FaRegUserCircle className="text-2xl" />
             )
-            :
-            (
-              <FaRegUserCircle className="text-2xl"/>
-            )
-          }
-          {
-            user ? 
-            (<button onClick={handleLogOut}  className="btn">Sign Out</button>):
-            (<Link to='/auth/login' className="btn">Sign in</Link>)
-          }
-          
+          ) : (
+            <FaRegUserCircle className="text-2xl" />
+          )}
+          {user ? (
+            <button onClick={handleLogOut} className="btn">Sign Out</button>
+          ) : (
+            <Link to='/auth/login' className="btn">Sign in</Link>
+          )}
         </div>
       </div>
     </div>

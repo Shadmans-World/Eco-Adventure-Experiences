@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Context API/AuthProvider";
+import { FcGoogle } from 'react-icons/fc'; // Import the Google icon
 
 const Login = () => {
-    const { setUser, logInUser, error, setError } = useContext(AuthContext);
+    const { setUser, logInUser, googleSignInUser, error, setError } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/'; // Redirect to previous page after login
-    
+
     const handleLogin = (e) => {
         e.preventDefault();
         const data = e.target;
@@ -23,10 +24,21 @@ const Login = () => {
             navigate(from, { replace: true }); // Redirect to the requested page or home
         })
         .catch(error => {
-            const code = error.code;
             const message = error.message;
             setError(`Error: ${message}`); // Display more detailed error message
         });
+    };
+
+    const handleGoogle = () => {
+        googleSignInUser()
+            .then(() => {
+                // No need to handle user inside here, because it's already set in the AuthContext
+                setError(""); // Clear any previous errors
+                navigate(from, { replace: true }); // Redirect to the requested page or home
+            })
+            .catch(error => {
+                setError(`Google Sign-In Error: ${error.message}`); // Show error message
+            });
     };
 
     return (
@@ -79,6 +91,16 @@ const Login = () => {
                         <div className="text-center text-[15px] mb-3 text-red-600">
                             <p>New to this website? <span><Link className="text-black font-bold" to='/auth/register'>Register</Link> please</span></p>
                         </div>
+
+                        {/* Google Sign-In Button */}
+                        <div className="flex flex-col justify-center items-center gap-y-2 my-3">
+                            <p>Or sign in with</p>
+                            <button onClick={handleGoogle} className="btn btn-outline btn-circle">
+                                <FcGoogle className="w-8 h-8" />
+                            </button>
+                        </div>
+
+                        {/* Display Error Message */}
                         {error && (
                             <p className="text-red-600 mb-3 text-center">{error}</p>
                         )}
