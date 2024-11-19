@@ -72,6 +72,8 @@ const AuthProvider = ({ children }) => {
       });
   };
 
+  
+
   // Auth state change listener (user state persistence)
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {

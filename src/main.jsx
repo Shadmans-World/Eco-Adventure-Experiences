@@ -9,11 +9,12 @@ import Root from './Root/Root.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 import Login from './Auth/Login.jsx';
 import Register from './Auth/Register.jsx';
-import ForgotPass from './Auth/ForgotPass.jsx';
+
 import Details from './components/Details.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx'; // Import PrivateRoute
 import MyProfile from './components/MyProfile.jsx';
 import UpdateProfile from './components/UpdateProfile.jsx';
+import ForgotPassword from './Auth/ForgotPassword.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,8 +36,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/forgotPass',
-        element: <ForgotPass />,
-      },
+        element: <ForgotPassword />
+    },
+      
       {
         path: '/details/:id',
         element: (
