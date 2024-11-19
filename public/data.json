@@ -113,7 +113,7 @@
       "duration": "3 Days",
       "adventureLevel": "Intermediate",
       "includedItems": ["Guide", "Meals", "Camping Gear"],
-      "ecoFriendlyFeatures": ["Minimal waste policy", "Use of biodegradable products", "Support for local guides"],
+      "ecoFriendlyFeatures": ["Minimal waste policy", "Use of biodegradable", "Support for local guides"],
       "maxGroupSize": 8,
       "specialInstructions": [
         "Pack light but include essentials.",
