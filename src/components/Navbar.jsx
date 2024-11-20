@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { auth, AuthContext } from "../Context API/AuthProvider";
 import { FaRegUserCircle } from "react-icons/fa";
-
+import logo from "../assets/bangladesh.png"
 const Navbar = () => {
   const { user, logOut, setUser } = useContext(AuthContext);
 
@@ -34,8 +34,8 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <div className="px-5 navbarExtra">
+      <div className=" navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,7 +61,11 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">BEAUTIFUL BANGLADESH</a>
+          <div>
+            <img src={logo} alt="logo" className="w-10 md:hidden ml-2"/>
+          <a className="md:ml-2 lg:ml-0 text-3xl font-bold  hidden md:block ">BEAUTIFUL <span className="text-xl font-bold bg-gradient-to-r from-green-600 to-red-500 bg-clip-text text-transparent">BANGLADESH</span></a>
+          </div>
+          
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

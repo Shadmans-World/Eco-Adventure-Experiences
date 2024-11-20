@@ -1,29 +1,29 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import AOS from 'aos'; // Import AOS for animations
-import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos'; 
+import 'aos/dist/aos.css'; 
 
 const Card = ({ item }) => {
-  // Initialize AOS when the component mounts
+ 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Trigger animation once
+      duration: 1000,
+      once: true, 
     });
   }, []);
 
   return (
     <div
-      className="card bg-base-100 w-96 shadow-xl flex flex-col my-4 " // Added my-4 for spacing between cards
-      data-aos="fade-up" // AOS animation on scroll
-      data-aos-delay="200" // Delay before animation starts
+      className="card bg-base-100 md:h-[550px] w-64 lg:w-80 shadow-xl  flex flex-col my-4  " 
+      data-aos="fade-up" 
+      data-aos-delay="200" 
     >
       {/* Image Section */}
-      <figure className="px-10 pt-10">
+      <figure className=" px-5 h-[200px] lg:px-10 pt-10">
         <img
           src={item.image}
           alt={item.title}
-          className="rounded-xl h-[200px] w-[400px] object-cover" // Ensures image maintains aspect ratio
+          className="rounded-xl h-full w-[400px] object-cover" 
         />
       </figure>
 
@@ -41,7 +41,7 @@ const Card = ({ item }) => {
         </div>
 
         <div className="card-actions mt-auto">
-          {/* Added mt-auto to push the button to the bottom */}
+          
           <Link to={`/details/${item.id}`} className="btn btn-primary mt-4 bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition-colors">
             Explore Now
           </Link>

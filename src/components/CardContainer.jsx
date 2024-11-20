@@ -2,23 +2,23 @@ import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../Context API/AuthProvider';
 import Card from './Card';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import the AOS CSS file
+import 'aos/dist/aos.css'; 
 
 const CardContainer = () => {
   const { items } = useContext(AuthContext);
 
-  // Initialize AOS when the component mounts
+  
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in ms
-      easing: 'ease-in-out', // Animation easing
+      duration: 1000, 
+      easing: 'ease-in-out', 
     });
   }, []);
 
   return (
-    <div className="max-w-[1440px] mx-auto flex justify-center flex-col items-center mt-10">
+    <div className="max-w-[1440px] px-3 md:px-0 mx-auto flex justify-center flex-col items-center mt-10">
       {/* Title of the project */}
-      <h1 className="text-4xl font-bold">ECO-Beautiful BANGLADESH</h1>
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-green-600 mb-8 text-center">BEAUTIFUL BANGLADESH</h1>
       
       {/* Description of the project */}
       <p className="text-lg text-center text-gray-400 mt-4 max-w-4xl">

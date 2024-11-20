@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { sendPasswordResetEmail } from "firebase/auth";
-import { auth } from "../Context API/AuthProvider"; // Assuming you have auth exported from context provider
+import { auth } from "../Context API/AuthProvider"; 
 
 const ForgotPassword = () => {
     const location = useLocation();
@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
 
-    // Check if the email is passed via the state from the Login page
+   
     useEffect(() => {
         if (location.state?.email) {
             setEmail(location.state.email);
@@ -21,13 +21,13 @@ const ForgotPassword = () => {
     const handleResetPassword = (e) => {
         e.preventDefault();
 
-        // Send password reset email through Firebase Auth
+       
         sendPasswordResetEmail(auth, email)
             .then(() => {
                 alert("Password reset email sent! Check your inbox.");
-                // Redirect to Gmail by opening a new tab with Gmail
+               
                 window.open("https://mail.google.com", "_blank");
-                navigate("/auth/login"); // Redirect back to login
+                navigate("/auth/login"); 
             })
             .catch((error) => {
                 setError(`Error: ${error.message}`);
@@ -50,8 +50,8 @@ const ForgotPassword = () => {
                                     name="email"
                                     className="input input-bordered"
                                     required
-                                    value={email || ""} // Ensure email value is always a string
-                                    onChange={(e) => setEmail(e.target.value)} // Allow email to be changed
+                                    value={email || ""} 
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
                             <div className="form-control mt-6">

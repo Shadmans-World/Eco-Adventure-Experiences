@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Context API/AuthProvider";
-import { FcGoogle } from "react-icons/fc"; // Import the Google icon
+import { FcGoogle } from "react-icons/fc"; 
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 const Login = () => {
@@ -19,42 +19,41 @@ const Login = () => {
     const data = e.target;
     const email = data.email.value;
     const password = data.password.value;
-
+    
     logInUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
-        setError(""); // Clear any previous error
-        navigate(from, { replace: true }); // Redirect to the requested page or home
+        setError(""); 
+        navigate(from, { replace: true }); 
       })
       .catch((error) => {
         const message = error.message;
-        setError(`Error: ${message}`); // Display more detailed error message
+        setError(`Error: ${message}`); 
       });
   };
 
   const handleGoogle = () => {
     googleSignInUser()
       .then(() => {
-        setError(""); // Clear any previous errors
-        navigate(from, { replace: true }); // Redirect to the requested page or home
+        setError(""); 
+        navigate(from, { replace: true }); 
       })
       .catch((error) => {
-        setError(`Google Sign-In Error: ${error.message}`); // Show error message
+        setError(`Google Sign-In Error: ${error.message}`); 
       });
   };
 
   return (
     <div className="mt-10">
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero  min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+  Welcome back! Please log in to access your account and enjoy all the features we offer. If you don't have an account yet, feel free to <Link className="text-blue-500 font-bold" to="/auth/register">register</Link> and get started.
+</p>
+
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleLogin} className="card-body">
@@ -95,7 +94,7 @@ const Login = () => {
                 <label className="label">
                   <Link
                     to="/forgotPass"
-                    state={{ email }} // Pass the email via state
+                    state={{ email }} 
                     className="label-text-alt link link-hover"
                   >
                     Forgot password?
@@ -114,7 +113,7 @@ const Login = () => {
               <p>
                 New to this website?{" "}
                 <span>
-                  <Link className="text-black font-bold" to="/auth/register">
+                  <Link className="text-black font-bold" to="/auth/register" onClick={()=>setError("")}>
                     Register
                   </Link>{" "}
                   please

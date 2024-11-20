@@ -16,7 +16,7 @@ const Register = () => {
     setError,
     googleSignInUser,
   } = useContext(AuthContext);
-  const navigate = useNavigate(); // Use navigate hook to redirect after Google Sign-In
+  const navigate = useNavigate(); 
   const [visible, setVisible] = useState(false);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -26,12 +26,12 @@ const Register = () => {
     const email = data.email.value;
     const password = data.password.value;
 
-    // Validation flags
+    
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
     const isValidLength = password.length >= 6;
 
-    // Set errors based on validation
+    
     setPassErrors({
       uppercase: hasUppercase
         ? ""
@@ -44,7 +44,7 @@ const Register = () => {
         : "Password must be at least 6 characters long.",
     });
 
-    // If validation fails, prevent form submission
+    
     if (!hasUppercase || !hasLowercase || !isValidLength) {
       return;
     }
@@ -62,49 +62,48 @@ const Register = () => {
           .then(() => {
            
 
-            // Manually update the user in the AuthContext after profile update
+           
             const updatedUser = { ...user, displayName: name, photoURL: photo };
             setUser(updatedUser);
 
-            data.reset(); // Reset the form after successful registration
-            setError(""); // Clear any previous errors
-            navigate("/"); // Navigate to the home page
+            data.reset(); 
+            setError(""); 
+            navigate("/"); 
           })
           .catch((err) => {
            
-            setError(err.message); // Display only the error message
+            setError(err.message); 
           });
       })
       .catch((err) => {
         
-        setError(err.message); // Set the error message to show to the user
+        setError(err.message); 
       });
   };
 
   const handleGoogle = () => {
     googleSignInUser()
       .then(() => {
-        navigate("/"); // Navigate to home page after successful Google Sign-In
+        navigate("/"); 
       })
       .catch((err) => {
         
-        setError(err.message); // Show the error message to the user
+        setError(err.message); 
       });
   };
 
   return (
     <div>
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register now!</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+  Welcome! Create an account to enjoy all the amazing features and benefits we offer. Already have an account? <Link className="text-blue-500 font-bold" to="/auth/login">Log in</Link> now.
+</p>
+
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card bg-base-100 w-full  max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -172,7 +171,7 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
-             {/* Error Message */}
+            
              {error && (
               <div className="form-control mb-3">
                 <p className="text-center text-red-600 text-sm">{error}</p>
@@ -180,7 +179,7 @@ const Register = () => {
             )}
             <p className="text-center mb-3 text-red-600 text-[15px]">
               Already have an account?{" "}
-              <Link className="font-bold text-black" to="/auth/login">
+              <Link className="font-bold text-black" to="/auth/login" onClick={()=>setError("")}>
                 Login
               </Link>{" "}
               please

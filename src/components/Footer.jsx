@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"; 
+import { FaFacebookF, FaTwitter, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa"; 
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and About Section */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Eco Adventure</h2>
+            <h2 className="text-2xl font-bold mb-4">BEAUTIFUL BANGLADESH</h2>
             <p className="text-gray-400">
               Explore the beauty of nature with our curated eco-friendly
               adventures. Discover, experience, and cherish the planet.
@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="flex space-x-4 mt-4">
               {/* Social Media Icons */}
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/shadman.shoumik.shaon/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200"
@@ -83,7 +83,7 @@ const Footer = () => {
                 <FaFacebookF className="w-6 h-6" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/ShadmanShaon99"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200"
@@ -91,12 +91,28 @@ const Footer = () => {
                 <FaTwitter className="w-6 h-6" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/shadman_ars/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200"
               >
                 <FaInstagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://github.com/Shadmans-World"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gray-200"
+              >
+                <FaGithub className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shadman-undefined-839b65291/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gray-200"
+              >
+                <FaLinkedin className="w-6 h-6" />
               </a>
             </div>
           </div>

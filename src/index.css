@@ -7,3 +7,29 @@
 *{
   font-family: "Raleway", sans-serif;
 }
+body {
+  background-color: #f0f8ff; /* Snowy background */
+  color: #333; /* Dark text for readability */
+}
+
+.btn {
+  background-color: #4682b4; /* Winter blue */
+  color: white;
+}
+
+.header {
+  background: linear-gradient(to right, #b0e0e6, #87cefa); /* Light blue gradient */
+}
+
+h1, h2, h3 {
+  font-family: 'Snowburst', sans-serif;
+}
+
+.navbarExtra {
+  background: linear-gradient(135deg, #6fa3ef, #87cefa); /* Winter blues gradient */
+  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}

@@ -4,43 +4,43 @@ import { AuthContext } from '../Context API/AuthProvider';
 
 const Details = () => {
    
-  const { id } = useParams(); // Get the id from the URL
-  const { items} = useContext(AuthContext); // Access the items from context
+  const { id } = useParams(); 
+  const { items} = useContext(AuthContext); 
   const [itemDetails, setItemDetails] = useState(null);
-  const [showModal, setShowModal] = useState(false); // State for modal visibility
+  const [showModal, setShowModal] = useState(false); 
 
   
 
-  // Find the item that matches the id from the URL
+  
   useEffect(() => {
-    const item = items.find(item => item.id === parseInt(id)); // Find item by ID
-    setItemDetails(item); // Set the details of the found item
+    const item = items.find(item => item.id === parseInt(id)); 
+    setItemDetails(item); 
   }, [id, items]);
 
   // Function to handle "Talk with Expert" click
   const handleTalkWithExpert = () => {
     const currentTime = new Date();
-    const hours = currentTime.getHours(); // Get current hour
+    const hours = currentTime.getHours(); 
 
-    // Check if the current time is between 10 AM and 8 PM
+   
     if (hours >= 10 && hours < 20) {
-      // Open Google Meet link in a new tab
+      
       window.open('https://meet.google.com/', '_blank');
     } else {
-      // Show consultation time modal
+      
       setShowModal(true);
     }
   };
 
   if (!itemDetails) {
-    return <p>Loading...</p>; // Show loading if the item is not found
+    return <p>Loading...</p>; 
   }
 
   return (
     <div className="bg-gradient-to-r from-blue-50 via-blue-100 to-white min-h-screen flex flex-col items-center py-10">
       {/* Title & Image */}
       <div className="text-center w-full px-6">
-        <h1 className="text-5xl font-extrabold text-blue-600 tracking-wide">{itemDetails.title}</h1>
+        <h1 className="text-3xl md:text-5xl font-extrabold text-blue-600 tracking-wide">{itemDetails.title}</h1>
         <img
           src={itemDetails.image}
           alt={itemDetails.title}
