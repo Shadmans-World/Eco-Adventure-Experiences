@@ -21,7 +21,7 @@
 
 - **Mobile-Responsive Design**: Whether you’re on a laptop or smartphone, the site is fully optimized for all screen sizes. 📱💻
 
-- **Expert Advice**: Need personalized travel advice? Contact one of our experts for tailored recommendations. Our team is ready to guide you through your eco-friendly journey. ✉️ [Contact an Expert](mailto:expert@ecoadventure.com)
+- **Expert Advice**: Need personalized travel advice? Contact one of our experts for tailored recommendations. Our team is ready to guide you through your eco-friendly journey. ✉️ 
 
 ## **npm Packages Used** 🛠️
 This project leverages some fantastic npm packages to enhance its performance and functionality:
