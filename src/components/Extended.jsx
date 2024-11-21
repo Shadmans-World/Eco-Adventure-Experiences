@@ -65,7 +65,7 @@ const Extended = () => {
                         Why Choose BEAUTIFUL BANGLADESH?
                     </h2>
                     <p className="text-gray-700 text-base sm:text-lg mb-12 max-w-3xl mx-auto">
-                        Eco-adventures offer a unique way to explore the world while preserving nature for future generations. By choosing eco-friendly travel experiences, you contribute to the protection of our planet and support sustainable practices in local communities.
+                    BEAUTIFUL BANGLADESH offer a unique way to explore the world while preserving nature for future generations. By choosing eco-friendly travel experiences, you contribute to the protection of our planet and support sustainable practices in local communities.
                     </p>
                     <div className="flex flex-wrap justify-center gap-8 sm:gap-10">
                         <div
