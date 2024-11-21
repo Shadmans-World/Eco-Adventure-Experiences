@@ -120,7 +120,7 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Eco Adventure. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BEAUTIFUL BANGLADESH. All rights reserved.</p>
         </div>
       </div>
     </footer>

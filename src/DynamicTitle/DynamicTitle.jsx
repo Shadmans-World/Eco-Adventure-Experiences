@@ -26,9 +26,9 @@ const DynamicTitle = () => {
     if (path.startsWith("/details/")) {
       
       const id = path.split("/details/")[1];
-      title = `Details for ${id} - Your App Name`;
+      title = `Details for ${id} - BEAUTIFUL BANGLADESH`;
     } else {
-      title = titleMap[path] || "Default Title - Your App Name";
+      title = titleMap[path] || "Default Title - BEAUTIFUL BANGLADESH";
     }
 
     document.title = title;
