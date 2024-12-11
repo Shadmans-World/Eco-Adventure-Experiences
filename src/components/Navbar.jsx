@@ -22,16 +22,31 @@ const Navbar = () => {
     </>
   );
 
-  const handleLogOut = () => {
-    logOut()
-      .then(() => {
-        setUser(null);
-       
-      })
-      .catch(error => {
-        
-      });
-  };
+  <div className="navbar-end flex gap-3">
+  {user ? (
+    user.photoURL ? (
+      <div className="relative group">
+        <img
+          src={user.photoURL}
+          alt="user"
+          className="w-10 h-10 rounded-xl object-cover"
+        />
+        <span className="absolute -bottom-10 left-0 right-0 w-max bg-opacity-50 text-black text-sm text-center rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal max-w-32 overflow-hidden">
+          {user.displayName}
+        </span>
+      </div>
+    ) : (
+      <FaRegUserCircle className="text-2xl" />
+    )
+  ) : (
+    <FaRegUserCircle className="text-2xl" />
+  )}
+  {user ? (
+    <button onClick={handleLogOut} className="btn">Sign Out</button>
+  ) : (
+    <Link to='/auth/login' className="btn">Sign in</Link>
+  )}
+</div>;
 
   return (
     <div className="px-5 navbarExtra">

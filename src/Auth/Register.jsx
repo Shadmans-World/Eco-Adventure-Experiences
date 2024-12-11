@@ -83,7 +83,8 @@ const Register = () => {
 
   const handleGoogle = () => {
     googleSignInUser()
-      .then(() => {
+      .then((result) => {
+        console.log(result.user)
         navigate("/"); 
       })
       .catch((err) => {

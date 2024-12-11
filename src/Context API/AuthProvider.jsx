@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import app from '../Firebase/firebase.config';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { FaRegUserCircle } from 'react-icons/fa';
 
 
 export const AuthContext = createContext(null);
@@ -56,7 +57,7 @@ const AuthProvider = ({ children }) => {
         
         // Handle photoURL if it's missing
         if (!user.photoURL) {
-          user.photoURL = user.providerData[0]?.photoURL || '';
+          user.photoURL = user.providerData[0]?.photoURL || "";
         }
         
         setUser(user); // Set user in context
